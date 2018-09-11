@@ -4,7 +4,18 @@ import Vuex from "vuex"
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {},
+  state: {
+    menuItems: [
+      {
+        label: "About",
+        name: "about",
+      },
+      {
+        label: "Todos",
+        name: "todos",
+      },
+    ],
+  },
   mutations: {},
   actions: {},
 })

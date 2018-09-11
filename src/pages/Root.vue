@@ -1,6 +1,6 @@
 <template>
   <div class="Root">
-    <img alt="Vue logo" src="../assets/logo.png">
+    root
   </div>
 </template>
 
