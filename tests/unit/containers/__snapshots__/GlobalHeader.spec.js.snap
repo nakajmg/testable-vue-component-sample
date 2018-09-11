@@ -2,10 +2,10 @@
 
 exports[`GlobalHeader.vue template snapshot 1`] = `
 <header
-  class="Header"
+  class="GlobalHeader"
 >
   <div
-    class="Logo Header_Logo"
+    class="Logo GlobalHeader_Logo"
   >
     <img
       alt="Vue logo"
@@ -15,7 +15,7 @@ exports[`GlobalHeader.vue template snapshot 1`] = `
   </div>
    
   <span
-    class="Header_SiteTitle"
+    class="GlobalHeader_SiteTitle"
   >
     <div
       class="SiteTitle"
@@ -27,7 +27,7 @@ exports[`GlobalHeader.vue template snapshot 1`] = `
   </span>
    
   <div
-    class="Menu Header_Menu"
+    class="Menu GlobalHeader_Menu"
   >
     <div
       class="MenuItem Menu_Item"

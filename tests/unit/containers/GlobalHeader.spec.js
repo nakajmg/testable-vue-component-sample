@@ -44,7 +44,7 @@ describe("GlobalHeader.vue", () => {
       wrapper.setMethods({
         navigateRoot: mock,
       })
-      wrapper.find(".Header_SiteTitle").trigger("click")
+      wrapper.find(".GlobalHeader_SiteTitle").trigger("click")
       expect(mock).toHaveBeenCalled()
     })
     it("@clickMenuItem=onClickMenuItem", () => {

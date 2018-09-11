@@ -1,4 +1,4 @@
-import { mount, createLocalVue, shallowMount } from "@vue/test-utils"
+import { createLocalVue, shallowMount } from "@vue/test-utils"
 import Vuex from "vuex"
 import menuItems from "../../_mockData/menuItems.json"
 import Root from "@/pages/Root.vue"
@@ -40,7 +40,7 @@ describe("Root.vue", () => {
       expect(mock).toHaveBeenCalled()
     })
     it("snapshot", () => {
-      const wrapper = mount(Root, { store, localVue, mocks: { $router } })
+      const wrapper = shallowMount(Root, { store, localVue, mocks: { $router } })
       expect(wrapper.vm.$el).toMatchSnapshot()
     })
   })

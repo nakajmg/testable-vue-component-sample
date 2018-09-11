@@ -1,12 +1,12 @@
 <template>
-  <header class="Header">
-    <Logo class="Header_Logo" />
-    <span class="Header_SiteTitle"
+  <header class="GlobalHeader">
+    <Logo class="GlobalHeader_Logo" />
+    <span class="GlobalHeader_SiteTitle"
       @click="navigateRoot"
     >
       <SiteTitle :title="siteTitle"/>
     </span>
-    <Menu class="Header_Menu"
+    <Menu class="GlobalHeader_Menu"
       :items="menuItems"
       @clickMenuItem="onClickMenuItem"
     />
@@ -19,7 +19,7 @@ import Logo from "../basics/Logo.vue"
 import SiteTitle from "../basics/SiteTitle.vue"
 import Menu from "../components/Menu.vue"
 export default {
-  name: "Header",
+  name: "GlobalHeader",
   components: {
     Logo,
     SiteTitle,
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss">
-.Header {
+.GlobalHeader {
   padding: 0.5em 1em;
   background-color: #3eaf7c;
   display: flex;
