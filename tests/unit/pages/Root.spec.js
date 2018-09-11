@@ -40,7 +40,7 @@ describe("Root.vue", () => {
       expect(mock).toHaveBeenCalled()
     })
     it("snapshot", () => {
-      const wrapper = shallowMount(Root, { store, localVue, mocks: { $router } })
+      const wrapper = mount(Root, { store, localVue, mocks: { $router } })
       expect(wrapper.vm.$el).toMatchSnapshot()
     })
   })
