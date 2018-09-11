@@ -5,5 +5,9 @@ exports[`Root.vue template snapshot 1`] = `
   class="Root"
 >
   <globalheader-stub />
+   
+  <logo-stub
+    class="Root_Logo"
+  />
 </div>
 `;
