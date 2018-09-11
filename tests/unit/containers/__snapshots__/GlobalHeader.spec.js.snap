@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GlobalHeader.vue template snapshot 1`] = `
+<header
+  class="Header"
+>
+  <div
+    class="Logo Header_Logo"
+  >
+    <img
+      alt="Vue logo"
+      class="Logo_Img"
+      src="../assets/logo.png"
+    />
+  </div>
+   
+  <span
+    class="Header_SiteTitle"
+  >
+    <div
+      class="SiteTitle"
+    >
+      
+  test site title
+
+    </div>
+  </span>
+   
+  <div
+    class="Menu Header_Menu"
+  >
+    <div
+      class="MenuItem Menu_Item"
+    >
+      <span
+        class="MenuItem_Label"
+      >
+        
+    About
+  
+      </span>
+    </div>
+    <div
+      class="MenuItem Menu_Item"
+    >
+      <span
+        class="MenuItem_Label"
+      >
+        
+    Todos
+  
+      </span>
+    </div>
+  </div>
+</header>
+`;

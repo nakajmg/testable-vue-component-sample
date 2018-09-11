@@ -1,11 +1,8 @@
 import { shallowMount } from "@vue/test-utils"
 import MenuItem from "@/basics/MenuItem.vue"
-
+import menuItems from "../../_mockData/menuItems.json"
 describe("MenuItem.vue", () => {
-  const propsData = {
-    label: "label",
-    name: "name",
-  }
+  const propsData = menuItems[0]
   it("props", () => {
     const wrapper = shallowMount(MenuItem, { propsData })
     expect(wrapper.vm.$props).toEqual(propsData)
@@ -16,19 +13,19 @@ describe("MenuItem.vue", () => {
       wrapper.vm.clickMenuItem()
       expect(wrapper.emitted("clickMenuItem")).toBeTruthy()
       expect(wrapper.emitted("clickMenuItem")[0][0]).toEqual({
-        name: "name",
+        name: propsData.name,
       })
     })
   })
   describe("template", () => {
     it("@click=clickMenuItem", () => {
-      const stub = jest.fn()
+      const mock = jest.fn()
       const wrapper = shallowMount(MenuItem, { propsData })
       wrapper.setMethods({
-        clickMenuItem: stub,
+        clickMenuItem: mock,
       })
       wrapper.find(".MenuItem_Label").trigger("click")
-      expect(stub).toHaveBeenCalled()
+      expect(mock).toHaveBeenCalled()
     })
     it("snapshot", () => {
       const wrapper = shallowMount(MenuItem, { propsData })

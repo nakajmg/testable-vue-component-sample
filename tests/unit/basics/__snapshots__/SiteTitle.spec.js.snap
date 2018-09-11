@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteTitle.vue template snapshot 1`] = `
+<div
+  class="SiteTitle"
+>
+  
+  test title
+
+</div>
+`;

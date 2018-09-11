@@ -8,7 +8,7 @@ exports[`MenuItem.vue template snapshot 1`] = `
     class="MenuItem_Label"
   >
     
-    label
+    About
   
   </span>
 </div>
