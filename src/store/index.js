@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    siteTitle: "Testable Vue Component",
     menuItems: [
       {
         label: "About",

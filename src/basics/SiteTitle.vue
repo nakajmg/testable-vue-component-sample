@@ -1,8 +1,18 @@
 <template>
   <div class="SiteTitle">
-    Testable Vue Component
+    {{title}}
   </div>
 </template>
+
+<script>
+export default {
+  name: "SiteTitle",
+  props: {
+    title: String,
+  },
+}
+</script>
+
 
 <style lang="scss">
 .SiteTitle {

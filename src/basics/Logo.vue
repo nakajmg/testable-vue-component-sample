@@ -12,6 +12,7 @@ export default {
 
 <style lang="scss">
 .Logo {
+  filter: brightness(1.2);
   &_Img {
     display: block;
     width: 100%;

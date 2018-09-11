@@ -4,7 +4,7 @@
     <span class="Header_SiteTitle"
       @click="navigateRoot"
     >
-      <SiteTitle/>
+      <SiteTitle :title="siteTitle"/>
     </span>
     <Menu class="Header_Menu"
       :items="menuItems"
@@ -26,7 +26,7 @@ export default {
     Menu,
   },
   computed: {
-    ...mapState(["menuItems"]),
+    ...mapState(["siteTitle", "menuItems"]),
   },
   methods: {
     onClickMenuItem({ name }) {
@@ -42,7 +42,7 @@ export default {
 <style lang="scss">
 .Header {
   padding: 0.5em 1em;
-  background-color: #555;
+  background-color: #3eaf7c;
   display: flex;
   align-items: center;
   &_Logo {
@@ -50,7 +50,7 @@ export default {
   }
   &_SiteTitle {
     color: #fff;
-    font-size: 2em;
+    font-size: 1.75em;
     margin-left: 0.5em;
     cursor: pointer;
   }
