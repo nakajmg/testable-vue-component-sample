@@ -40,17 +40,6 @@ exports[`GlobalHeader.vue template snapshot 1`] = `
   
       </span>
     </div>
-    <div
-      class="MenuItem Menu_Item"
-    >
-      <span
-        class="MenuItem_Label"
-      >
-        
-    Todos
-  
-      </span>
-    </div>
   </div>
 </header>
 `;

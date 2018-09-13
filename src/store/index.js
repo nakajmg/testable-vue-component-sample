@@ -11,10 +11,6 @@ export default new Vuex.Store({
         label: "About",
         name: "about",
       },
-      {
-        label: "Todos",
-        name: "todos",
-      },
     ],
   },
   mutations: {},

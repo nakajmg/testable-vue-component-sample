@@ -50,13 +50,14 @@ export default {
   }
   &_SiteTitle {
     color: #fff;
-    font-size: 1.75em;
+    font-size: 1.5em;
+    font-family: serif;
     margin-left: 0.5em;
     cursor: pointer;
   }
   &_Menu {
     color: #fff;
-    font-size: 1.25em;
+    font-size: 1em;
     margin-left: auto;
   }
 }
