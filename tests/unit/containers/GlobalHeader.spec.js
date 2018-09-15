@@ -2,13 +2,15 @@ import { shallowMount, mount, createLocalVue } from "@vue/test-utils"
 import GlobalHeader from "@/containers/GlobalHeader.vue"
 import Menu from "@/components/Menu.vue"
 import Vuex from "vuex"
-import menuItems from "../../_mockData/menuItems.json"
+import menuItems from "../_mockData/menuItems.json"
+// localのVueを作る
 const localVue = createLocalVue()
-
+// localのVueにVuexをインストール
 localVue.use(Vuex)
 describe("GlobalHeader.vue", () => {
   let store
 
+  // 毎テストケース実行前にstoreを初期化する
   beforeAll(() => {
     store = new Vuex.Store({
       state: {
@@ -20,6 +22,7 @@ describe("GlobalHeader.vue", () => {
 
   describe("methods", () => {
     it("clickMenuItem", () => {
+      // Vueインスタンス作成時にstoreとlocalVueを渡す
       const wrapper = shallowMount(GlobalHeader, { store, localVue })
       wrapper.vm.onClickMenuItem(menuItems[0])
       expect(wrapper.emitted("navigate")).toBeTruthy()

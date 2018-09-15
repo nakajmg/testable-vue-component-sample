@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import MenuItem from "../basics/MenuItem.vue"
+import MenuItem from "./Menu/MenuItem.vue"
 export default {
   name: "Menu",
   components: {

@@ -1,6 +1,6 @@
 import { createLocalVue, shallowMount } from "@vue/test-utils"
 import Vuex from "vuex"
-import menuItems from "../../_mockData/menuItems.json"
+import menuItems from "../_mockData/menuItems.json"
 import Root from "@/pages/Root.vue"
 import GlobalHeader from "@/containers/GlobalHeader.vue"
 const localVue = createLocalVue()
@@ -15,14 +15,17 @@ describe("Root.vue", () => {
         menuItems,
       },
     })
+    // $routerを模したオブジェクトの作成
     $router = {
       push: jest.fn(),
     }
   })
   describe("methos", () => {
     it("onNavigate", () => {
+      // Vueインスタンス作成時に$routerプロパティを注入する
       const wrapper = shallowMount(Root, { store, localVue, mocks: { $router } })
       wrapper.vm.onNavigate({ name: "root" })
+      // mock化した$router.pushが呼ばれているか
       expect($router.push).toHaveBeenCalledWith({
         name: "root",
       })
@@ -36,6 +39,7 @@ describe("Root.vue", () => {
         onNavigate: mock,
       })
       const globalHeader = wrapper.find(GlobalHeader)
+      // "navigate"イベントをemitする
       globalHeader.vm.$emit("navigate")
       expect(mock).toHaveBeenCalled()
     })
