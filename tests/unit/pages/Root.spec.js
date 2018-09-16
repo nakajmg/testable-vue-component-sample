@@ -15,9 +15,9 @@ describe("Root.vue", () => {
         menuItems,
       },
     })
-    // $routerを模したオブジェクトの作成
+    // $routerのモックを作成
     $router = {
-      push: jest.fn(),
+      push: jest.fn(), // $router.pushをモック関数にしておく
     }
   })
   describe("methos", () => {
